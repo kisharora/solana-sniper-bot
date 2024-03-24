@@ -185,7 +185,7 @@ export async function processRaydiumPool(id: PublicKey, poolState: LiquidityStat
     const burned = await checkBurned(poolState.baseMint);
 
     if(burned != true){
-      logger.warn({mint: poolState.baseMint},'Skipping, token doesnt burned');
+      logger.warn({mint: poolState.baseMint},'Skipping, LP isn\'t burned');
       return;
     } 
   }
@@ -194,7 +194,7 @@ export async function processRaydiumPool(id: PublicKey, poolState: LiquidityStat
     const locked = await isLiquidityLocked(poolState.baseMint);
 
     if(locked != true){
-      logger.warn({mint: poolState.baseMint},'Skipping,token doesnt locked');
+      logger.warn({mint: poolState.baseMint},'Skipping, LP isn\'t locked');
       return;
     }
 
