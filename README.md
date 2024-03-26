@@ -81,3 +81,4 @@ To collect more information on an issue, please change `LOG_LEVEL` to `debug`.
 ## Disclaimer
 
 Use this script at your own risk.
+# solanasniperbot
